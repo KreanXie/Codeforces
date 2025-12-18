@@ -9,7 +9,6 @@ import (
 
 const (
 	Author      = "KreanXie"
-	AuthorLover = "ChenXin"
 	sup         = 1 << 30
 	inf         = -sup
 )

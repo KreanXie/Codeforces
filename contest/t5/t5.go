@@ -9,24 +9,23 @@ import (
 
 const (
 	Author      = "KreanXie"
-	AuthorLover = "ChenXin"
 	sup         = 1 << 30
 	inf         = -sup
 )
 
 func solve(_r io.Reader, _w io.Writer) {
-	in := bufio.NewReader(_r)
-	out := bufio.NewWriter(_w)
+	rw := bufio.NewReadWriter(bufio.NewReader(_r), bufio.NewWriter(_w))
 
 	var ex int64
-	fmt.Fscan(in, &ex)
+	
+	fmt.Fscan(rw, &ex)
 	for ex != 0 {
 
 		goto next
 	next:
 		ex--
 	}
-	out.Flush()
+	rw.Flush()
 }
 
 func main() {
